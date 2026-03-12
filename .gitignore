@@ -1,0 +1,16 @@
+# Bỏ qua thư mục chứa dữ liệu thô và đã xử lý
+data/
+
+# Bỏ qua database hệ thống
+postgres_data/
+
+# Bỏ qua log của Airflow và Spark
+logs/
+
+# Bỏ qua các file cache sinh ra bởi Python và Pytest
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# Bỏ qua cache của Jupyter Notebook
+.ipynb_checkpoints/

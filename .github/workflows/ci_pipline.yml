@@ -1,0 +1,30 @@
+name: Data Pipeline CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    - name: Set up Python 3.8
+      uses: actions/setup-python@v4
+      with:
+        python-version: "3.8"
+
+    - name: Install Dependencies
+      run: |
+        python -m pip install --upgrade pip
+        # Cài đặt thư viện test và pyspark
+        pip install pytest pyspark==3.5.0
+
+    - name: Run PySpark Unit Tests
+      run: |
+        pytest tests/ -v
