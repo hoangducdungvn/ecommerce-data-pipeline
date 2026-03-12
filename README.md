@@ -22,4 +22,4 @@ Dự án xây dựng một luồng dữ liệu (Data Pipeline) tự động, áp
 1. Clone repository này.
 2. Cấp quyền: `echo -e "AIRFLOW_UID=$(id -u)" > .env`
 3. Khởi động các dịch vụ: `docker-compose up -d --build`
-4. Truy cập Airflow UI tại `http://localhost:8080` và bật DAG `ecommerce_daily_pipeline`.
+4. Truy cập Airflow UI tại `http://localhost:8080` và bật DAG `ecommerce_daily_pipeline`.    
